@@ -23,7 +23,7 @@ public class WaterManEntity extends EndermanEntity {
     public static final EntityType<?> WATER_MAN =
      Registry.register(
         Registry.ENTITY_TYPE,
-        new Identifier("gamer", "WATER_MAN"),
+        new Identifier("std.watermanmod", "WATER_MAN"),
         FabricEntityTypeBuilder.create(EntityCategory.MONSTER, (EntityType.EntityFactory<?>) new WaterManEntity()).dimensions(EntityDimensions.fixed(10, 30)).build()
     ); 
 
@@ -31,5 +31,5 @@ public class WaterManEntity extends EndermanEntity {
         SpawnEggItem item = new SpawnEggItem(type, col1, col2, new Item.Settings().group(ItemGroup.MISC));
         return item;
     }
-    //WaterManEntity
+
 }
