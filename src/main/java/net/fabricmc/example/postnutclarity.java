@@ -4,9 +4,9 @@ import net.minecraft.entity.mob.MobEntityWithAi;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.World;
 
-public class Underman extends MobEntityWithAi {
+public class postnutclarity extends MobEntityWithAi {
 
-    public Underman(EntityType<? extends MobEntityWithAi> entityType, World world) {
+    public postnutclarity(EntityType<? extends MobEntityWithAi> entityType, World world) {
         super(entityType, world);
     }
 

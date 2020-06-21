@@ -8,19 +8,19 @@ import net.minecraft.util.Identifier;
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.mob.MobEntity;
-import FabricDefaultAttributeRegistry;
+
 
 public class UndermanInit implements ModInitializer{
 
-    public static final EntityType<Underman> UNDERMAN = Registry.register(
+    public static final EntityType<postnutclarity> PNC = Registry.register(
         Registry.ENTITY_TYPE,
         new Identifier("entitytesting", "underman"),
-        FabricEntityTypeBuilder.create(EntityCategory.MONSTER, Underman::new).dimensions(EntityDimensions.fixed(3f, 1f)).build()
+        FabricEntityTypeBuilder.create(EntityCategory.MONSTER, postnutclarity::new).dimensions(EntityDimensions.fixed(3f, 1f)).build()
 );
 
 @Override
 public void onInitialize() {
-    FabricDefaultAttributeRegistry.register(UNDERMAN, Underman.createMobAttributes());
+    FabricDefaultAttributeRegistry.register(PNC, postnutclarity.createMobAttributes());
 }
 
 
