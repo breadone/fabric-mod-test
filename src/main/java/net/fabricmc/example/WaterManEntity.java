@@ -1,5 +1,5 @@
 package net.fabricmc.example;
-
+/*
 import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -32,4 +32,4 @@ public class WaterManEntity extends EndermanEntity {
         return item;
     }
 
-}
+}*/
