@@ -3,26 +3,27 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.mixin.object.builder.MaterialBuilderAccessor;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.block.MaterialColor;
 
 public class ExampleMod implements ModInitializer {
 
 	public static final FoodComponent fcMatoSoup = (new FoodComponent.Builder()).hunger(6).saturationModifier(2.4F).meat().build();
 	public static final FoodComponent fcCheese = (new FoodComponent.Builder()).hunger(2).saturationModifier(2.4F).meat().build();
-	public static final FoodComponent fcblockCheese = (new FoodComponent.Builder()).hunger(3).saturationModifier(2.4F).meat().build();
-	
-	//public static final MaterialColor;
-	//public static final Material cblockCheese = (new Material().METAL;
+	public static final FoodComponent fctato = (new FoodComponent.Builder().hunger(2).saturationModifier(2.4F).meat().build());
+	//public static final FoodComponent fcblockCheese = (new FoodComponent.Builder()).hunger(3).saturationModifier(2.4F).meat().build();
 
 	public static final Item big_sticc = new Item(new Item.Settings().group(ItemGroup.COMBAT).maxDamage(20));
     public static final Item mato_soup = new Item(new Item.Settings().group(ItemGroup.FOOD).food(fcMatoSoup).maxCount(64));
 	public static final Item cheese = new Item(new Item.Settings().group(ItemGroup.FOOD).food(fcCheese));
-	//public static final Block blockCheese = new Block(new Block.Settings().of(material));
+	//public static final Block blockCheese = new Block(FabricBlockSettings.of(Material.METAL));
+	public static final Item tato = new Item(new Item.Settings().group(ItemGroup.FOOD).food(fctato));
+
+	public static final Block blockCheese = new Block(FabricBlockSettings.of(Material.METAL));
 
 	@Override
 	public void onInitialize() {
@@ -40,5 +41,18 @@ public class ExampleMod implements ModInitializer {
 			Registry.ITEM,
 			new Identifier("breadmod:cheese"), cheese
 		);
+
+		//Registry.register(
+		//	Registry.BLOCK,
+		//	new Identifier("breadmod:blockCheese"), blockCheese	
+		//);
+		//Registry.register(
+		//	Registry.ITEM,
+		//	new Identifier("breadmod:blockCheese"),
+		//	new BlockItem(blockCheese, new Item.Settings().group(ItemGroup.MISC))
+	//);
+
+		Registry.register(Registry.BLOCK, new Identifier("breadmod:blockcheese"), blockCheese);
+        Registry.register(Registry.ITEM, new Identifier("breadmod:blockcheese"), new BlockItem(blockCheese, new Item.Settings().group(ItemGroup.MISC)));
 	} 
 }
