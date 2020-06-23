@@ -29,30 +29,25 @@ public class ExampleMod implements ModInitializer {
 	public void onInitialize() {
 		Registry.register(
 			Registry.ITEM,
-			new Identifier("breadmod:big_sticc"), big_sticc
+			new Identifier("modid:big_sticc"), big_sticc
 			);
 
 		Registry.register(
 			Registry.ITEM,
-			new Identifier("breadmod:mato_soup"), mato_soup
+			new Identifier("modid:mato_soup"), mato_soup
 			);
 
 		Registry.register(
 			Registry.ITEM,
-			new Identifier("breadmod:cheese"), cheese
+			new Identifier("modid:cheese"), cheese
 		);
 
-		//Registry.register(
-		//	Registry.BLOCK,
-		//	new Identifier("breadmod:blockCheese"), blockCheese	
-		//);
-		//Registry.register(
-		//	Registry.ITEM,
-		//	new Identifier("breadmod:blockCheese"),
-		//	new BlockItem(blockCheese, new Item.Settings().group(ItemGroup.MISC))
-	//);
+		Registry.register(Registry.BLOCK,
+		new Identifier("modid:blockcheese"), blockCheese
+		);
 
-		Registry.register(Registry.BLOCK, new Identifier("breadmod:blockcheese"), blockCheese);
-        Registry.register(Registry.ITEM, new Identifier("breadmod:blockcheese"), new BlockItem(blockCheese, new Item.Settings().group(ItemGroup.MISC)));
+		Registry.register(Registry.ITEM,
+		new Identifier("modid:blockcheese"),
+		new BlockItem(blockCheese, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 	} 
 }
