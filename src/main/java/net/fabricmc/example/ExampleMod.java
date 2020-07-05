@@ -45,7 +45,6 @@ public class ExampleMod implements ModInitializer {
 		Registry.register(Registry.BLOCK,
 		new Identifier("modid:blockcheese"), blockCheese
 		);
-
 		Registry.register(Registry.ITEM,
 		new Identifier("modid:blockcheese"),
 		new BlockItem(blockCheese, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));

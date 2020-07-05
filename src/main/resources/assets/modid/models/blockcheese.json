@@ -1,7 +1,3 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-      "all": "modid:block/blockcheese"
-    }
-  }
-
+  "parent": "modid:block/blockcheese"
+}
